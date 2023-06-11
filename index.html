@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="gr__shape2prog_csail_mit_edu"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+              <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="shortcut icon" href="http://shape2prog.csail.mit.edu/images/favicon.ico">
+        <meta name="description" content="Recommendation with Causality enhanced Natural Language Explanations">
+        <meta name="keywords" content="Recommendation with Causality enhanced Natural Language Explanations">
+
+        <title>Recommendation with Causality enhanced Natural Language Explanations</title>
+        <link rel="stylesheet" href="asset/font.css">
+        <link rel="stylesheet" href="asset/main.css">
+
+    </head>
+
+    <body data-gr-c-s-loaded="true">
+
+        <div class="outercontainer">
+            <div class="container">
+
+                <div class="content project_title">
+                    <h1>Recommendation with Causality enhanced </br> Natural Language Explanations</h1>
+                </div>
+
+                <div class="content project_headline">
+                    <center><h2>
+                      <font size="3">Anonymous Author(s)</font>&nbsp;&nbsp;
+                   
+                </div>
+
+
+                <div class="content">
+                    <div class="text">
+                        <h1>1. Abstract</h1>
+                        <p><font size=3>
+			Explainable recommendation has recently attracted increasing attention from both academic and industry communities.
+Among different explainable strategies, generating natural language explanations is an important method, which can deliver more informative, flexible and readable explanations to facilitate better user decisions. 
+Despite effectiveness, existing models are mostly optimized based on the observed datasets, which can be skewed due to the selection or exposure bias.
+To alleviate this problem, in this paper, we formulate the task of explainable recommendation with a causal graph, and design a causality enhanced model to generate unbiased explanations.
+More specifically, we firstly define an ideal unbiased learning objective, and then derive a tractable loss for the observational data based on the inverse propensity score (IPS), where the key is a sample re-weighting strategy for equalizing the loss and ideal objective in expectation.
+Considering that the IPS estimated from the sparse and noisy recommendation datasets can be inaccurate, we introduce a fault tolerant mechanism by minimizing the maximum loss induced by the sample weights near the IPS.
+For more comprehensive modeling, we further analyze and infer the potential latent confounders induced by the complex and diverse user personalities.
+We conduct extensive experiments by comparing with the state-of-the-art methods based on three real-world datasets to demonstrate the effectiveness of our model.		
+			</font></p>
+			    
+			    <h3>Contributions</h3>
+                            <p><ul class="download">
+			    <font size=3>
+                            <li>We propose to build an unbiased explainable recommender framework based on causal inference, which, to the best of our knowledge, is the first time in the recommendation domain.
+			    <li>To achieve the above idea, we design a framework to jointly correct the item- and feature-level biases, where we propose a fault tolerant IPS estimation strategy, and also model and infer the potential latent confounders.</li>
+			    <li>We conduct extensive experiments to demonstrate the effectiveness of our model based on three real-world datasets. </li>
+			    <li>To promote this direction and benefit the research community, we have released our framework at this webpage. </li>
+                            </font>
+                    </div>
+                </div>
+			
+			
+			
+			
+			
+                <div class="content">
+                    <div class="text">
+                        <h1>2. Main Results</h1>
+                    </div>
+
+                    <div class="content project_headline">
+					<div class="text">
+                            <p><font size=3>
+				Table 1: Overall comparison between our framework and baselines. For BLEU and ROUGE, the results are percentage values with "%" omitted. For each dataset and evaluation metric, we use bold fonts to label the best performance. "-" means the evaluation metric is not available for the model. "&darr;": lower value indicates better performance.
+	The performance improvements of our framework over the base models are significant under paired <i>t</i>-test with <i>p</i><0.05.		    
+			   </font></p>
+                        </div>
+                        <div class="img" style="text-align:center">
+                            <img class="img_responsive" src="asset/exp_results.png" alt="result" style="margin:auto;max-width:99%">
+			</div>
+                    </div>		
+                </div>
+			
+			
+			
+			
+			
+		<div class="content">
+                    <div class="text">
+                        <h1>3. Dataset and Code</h1>
+			    
+			<h2>3.1 Dataset <a href="https://drive.google.com/file/d/1cHFX6StqqvQeEn-E-ifL20rQPW05SsN1/view?usp=sharing">[link:Google Driver]</a></font></h2>
+			<div class="content project_headline">
+			<div class="text">
+                            <p style="text-align:center"><font size=3>Table 2: Statistics of the datasets.</font></p>
+                        </div>
+                        <div class="img" style="text-align:center">
+                            <img class="img_responsive" src="asset/dataset.png" alt="result" style="margin:auto;max-width:70%">
+                        </div>
+
+			<h2 style="text-align:left"> 3.2 Code <a href="https://drive.google.com/file/d/1ATISgfuxXk7-lD9Wq3neO4PldW6vNYzw/view?usp=sharing">[link:Google Driver]</a></font></h2>
+			<div class="content project_headline">
+			<div class="text">
+			    <p style="text-align:center"><font size=3>Table 3: Structure of the code files. “xxx” represents a specific model name.</font></p>
+                        </div>
+			<div class="img" style="text-align:center">
+                            <img class="img_responsive" src="asset/file.png" alt="result" style="margin:auto;max-width:60%">
+                        </div>
+
+                    </div>
+                </div>
+
+			
+			
+			
+
+                <div class="content">
+                    <div class="text">
+                        <h1>4. Usage</h1>
+				<h2>4.1. Download the dataset and code, then put the dataset into code folder.</h2>
+				<h2>4.2. Quick Start </h2>
+				<p> <font size=3>Take running PETER-USER as an example:</p>
+					<div class="img" style="text-align:center">
+					&nbsp;&nbsp;<img class="img_responsive" src="asset/quick_run.png" alt="result" style="margin:auto;max-width:70%">
+					</div>
+				<p> <font size=3>You can run the script to set additional command parameters:</p>
+					<div class="img" style="text-align:center">
+					<img class="img_responsive" src="asset/run_params.png" alt="result" style="margin:auto;max-width:70%">
+					</div>
+			        <h2>4.3. Hyper-Parameters tuning </h2>
+			    	<p> <font size=3>We tune the hyper-parameters of the implemented models and present the range for reference.</p>
+					<div class="content project_headline">
+					<div class="text">
+					<p style="text-align:center"><font size=3>Table 4: Parameters meanings and tunning ranges</font></p>
+					</div>
+					<div class="img" style="text-align:center">
+					<img class="img_responsive" src="asset/range.png" alt="result" style="margin:auto;max-width:80%">
+					</div>
+					</div>
+				</font>
+                    </div>
+                </div>
+               
+
+	
+			
+
+                <div class="content">
+                    <div class="text">
+                        <h1>5. Runtime Environment</h1>
+						<ul class="download">
+						<font size=3>
+                            				<li><p>Linux System: 5.13.0-44-generic</p></li>
+							<li><p>CPU: Intel(R) Xeon(R) Gold 5118 CPU @ 2.30GHz</p></li>
+							<li><p>GPU: NVIDIA Corporation Device 2204 (rev a1)</p></li>
+                           				<li><p>GPU-Memory: 24G</p></li>
+							<li><p>Python: 3.8.12</p></li>
+							<li><p>Pytorch: 1.10.1</p></li>
+							<li><p>CUDA: 11.3</p></li>
+						</font>
+                        </ul>
+						
+                    </div>
+                </div>
+
+<div id="download_plus_animation"></div></body></html>
