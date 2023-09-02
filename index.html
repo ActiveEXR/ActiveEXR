@@ -20,33 +20,26 @@
                     <h1>Active Explainable Recommendation with </br> Limited Labeling Budget</h1>
                 </div>
 
-                <div class="content project_headline">
-                    <center><h2>
-                      <font size="3">Anonymous Author(s)</font>&nbsp;&nbsp;
-                   
-                </div>
-
 
                 <div class="content">
                     <div class="text">
                         <h1>1. Abstract</h1>
                         <p><font size=3>
-Explainable recommendation algorithms aim to generate meaningful recommendation explanations for accelerating user decision-making and improving the transparency of systems. 
-However, in real-world scenarios, the explanation ground truth is scarce and difficult to obtain, which affects the performance of recommendation models trained in a supervised manner. 
-An intuitive solution is to manually annotate some explanation ground truth for model training. 
-Nevertheless, explanation annotation incurs significant expenses and it is unfeasible for a large-scale annotation. 
-To achieve the goal of low costs and high effectiveness, in this paper, we propose an active learning framework for annotating explanation ground truth in the field of recommendation system, which selects a small number of highly informative samples for annotation. 
-Specifically, we design two sample selection strategies based on entropy and influence function to evaluate the sample informativeness from the perspectives of uncertainty and influence, respectively. 
-We conduct experiments on the task of generating natural language recommendation explanations based on two real-world datasets containing user reviews to demonstrate the effectiveness of our framework. 
+Explainable recommendation has gained significant attention due to its potential to enhance user trust and system transparency.
+Previous studies primarily focus on refining model architectures to generate more informative explanations, assuming that the explanation data is sufficient and easy to acquire.
+However, in practice, obtaining the ground truth for explanations can be costly since individuals may not be inclined to put additional efforts to provide behavior explanations.
+In this paper, we study a novel problem in the field of explainable recommendation, that is, “given a limited budget to incentivize users to provide behavior explanations, how to effectively collect data such that the downstream models can be better optimized?”
+To solve this problem, we propose an active learning framework for recommender system, which consists of an acquisition function for sample collection and an explainable recommendation model to provide the final results.
+We consider both uncertainty and influence based strategies to design the acquisition function, which can determine the sample effectiveness from compensate perspectives.
+To demonstrate the effectiveness of our framework, we conduct extensive experiment based on real-world datasets.
 			</font></p>
 			    
 			    <h3>Contributions</h3>
                             <p><ul class="download">
 			    <font size=3>
-                            <li>We propose an active learning framework for recommendation explanations labeling. To the best of our knowledge, it is the first time in RecSys field.</li>
-			    <li>To achieve this objective, we design two sample selection strategies from different perspectives to evaluate the informativeness of samples.</li>
-			    <li>We conduct extensive experiments on the task of recommendation with natural language explanations to demonstrate the effectiveness of our framework. </li>
-		            <li>To benefit the research community, we have released our code at this page.</li>
+                            <li>We propose that obtaining the ground truth for explanations is costly and present a novel problem: how to effectively collect the explainable user behavior data with a limited budget. To the best of our knowledge, it is the first time in the field of recommendation system.</li>
+			    <li>To solve this problem, we propose a unified active learning framework for explainable recommendation. In this framework, we design two strategies from different perspectives to assess the importance of user-item pairs.</li>
+			    <li>We conduct extensive experiments on the task of recommendation with natural language explanations to demonstrate the effectiveness of our framework. To benefit the research community, we have released our code at this page.</li>
                             </font>
                     </div>
                 </div>
